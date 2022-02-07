@@ -20,11 +20,18 @@ html {
 
 body {
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
   font-family: "PT Sans", sans-serif ;
   font-size: 18px;
   line-height: 21px;
   color: #000000;
-  background-color: #FFFFFF;
+  background-color: #f2f2f2;
+}
+
+.main-container {
+  flex-grow: 1;
 }
 
 .page-header {
@@ -40,13 +47,42 @@ body {
   background-color: #ffffff;
   text-decoration: none;
   text-transform: uppercase;
+  display: flex;
+  width: 1060px;
+  margin: 0 auto;
+}
+
+.navigation-logo {
+  margin: 0;
+  padding: 0;
+  width: 139px;
+}
+
+.navigation-list {
+  margin: 0;
+  padding: 0;
+  width: 460px;
+}
+
+.navigation-user {
+  margin-left: auto;
+  max-width: 300px;
+}
+
+.page-container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  display: block;
+  margin: 0 auto;
 }
 
 .page-header a {
   color: #000000;
   text-decoration: none;
 }
-
 
 .page-footer a{
   color: #000000;
@@ -67,23 +103,28 @@ body {
 
 .adventages { 
   background-color: #ffffff;
+  margin: 0;
+  padding: 0;
 }
 
 .advantages-list {
+  display: flex;
   text-align: center;
+  margin: 0;
+  padding: 0;
 }
 
-.title_town{
-  font-size: 30px;
-  line-height: 36px;
-  text-align: center;
+.advantages-item {
+  background-color: #83B3D31F;
+  width: 400px;
 }
 
-.causes {
-  text-align: center;
-  font-size: 22px;
-  line-height: 26px;
-  color: #333333;
+.advantages-item:nth-child(2) {
+  background-color: #FFFFFF;
+}
+
+.advantages-item:nth-child(5) {
+  background-color: #83B3D3;
 }
 
 .advantages-title {
@@ -91,21 +132,60 @@ body {
   line-height: 28px;
   text-transform: uppercase;
   font-weight: 700;
-}
-
-.town-photo {
-  color: #FFFFFF;
-  background-color: #83B3D3;
+  padding: 23 75;
 }
 
 .advantages-item p{
+  text-align: center;
   color: #333333;
+  font-weight: 400;
+  width: 250px;
+  padding: 20 75;
 }
 
-.advantages-item a {
-  color: #000000;
-  font-size: 24px;
-  line-height: 28px;
+.title_town {
+  display: flex;
+  justify-content: space-between;
+  font-size: 30px;
+  line-height: 36px;
+  text-align: center;
+  font-weight: 700;
+  width: 720px;
+  margin: 0 auto;
+}
+
+.title_town .picture{
+  width: 800px;
+}
+
+.causes {
+  text-align: center;
+  font-size: 22px;
+  line-height: 26px;
+  color: #333333;
+  font-weight: 400;
+  width: 720px;
+  margin: 0 auto;
+}
+
+.town-photo {
+  display: flex;
+  flex-direction: spspace-between;
+  color: #FFFFFF;
+  background-color: #83B3D3;
+  width: 1200px;
+}
+
+.town-photo .advantages-item-blue {
+  width: 400px;
+}
+
+.town-photo .number {
+  width: 65px;
+}
+
+.town-photo p {
+  width: 220px;
 }
 
 .take-mailing {
@@ -115,11 +195,21 @@ body {
   font-size: 22px;
   line-height: 26px;
   color: #FFFFFF;
+  width: 1200px;
 }
 
 .take-mailing input {
   font-family: inherit;
+  width: 600px;
+  padding: 0 0 0 200;
 }
+
+.take-mailing .button-blue 
+{
+  width: 200px;
+  padding: 0 200 0 0;
+}
+
 .mailing {
   font-size: 30px;
   line-height: 36px;
@@ -131,26 +221,15 @@ body {
   text-align: center;
   font-size: 22px;
   line-height: 26px;
+  width: 1200px;
+
 }
 
 .want {
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
-}
-
-.social {
-  text-align: left;
-  text-decoration: none;
-
-}
-
-.tel {
-  text-align: center;
-  font-size: 40px;
-  line-height: 40px;
-  color: #000000;
-  text-decoration: none;
+  padding: 0 240;
 }
 
 .logo-academy {
@@ -198,12 +277,39 @@ body {
   color: #333333;
 }
 
-.footer-tel {
+.page-footer {
+  width: 1200px;
+  justify-content: space-between;
+}
+
+.social-list {
+  text-decoration: none;
+  max-width: 120px;
+  padding: 0 1021 0 72;
+  margin-right: auto;
+}
+
+.tel {
   text-align: center;
   font-size: 40px;
   line-height: 40px;
+  font-weight: 400;
   color: #000000;
   text-decoration: none;
+  width: 720px;
+  padding: 0 240;
+}
+
+.footer-logo {
+width: 115px;
+margin-left: auto;
+}
+
+.page-footer-container {
+  display: flex;
+  width: 1200px;
+  margin: 0 auto;
+  justify-content: space-between;
 }
 
 .button-blue {
@@ -270,6 +376,7 @@ body {
   text-decoration: none;
   color: #FFFFFF;
   font-family: inherit;
+  padding: 0 313 0 312;
 }
 
 .pagination-item .button-blue{
