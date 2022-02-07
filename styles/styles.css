@@ -53,7 +53,7 @@ body {
 }
 
 .navigation-logo {
-  margin: 0;
+  margin-right: 70px;
   padding: 0;
   width: 139px;
 }
@@ -247,9 +247,15 @@ body {
   line-height: 78px;
 }
 
+.catalog-hotel {
+  display: flex;
+  flex-direction: row;
+}
+
 .catalog-filter-group {
   font-size: 18px;
   line-height: 23px;
+  display: flex;
 }
 
 .catalog-filter-title {
@@ -260,6 +266,16 @@ body {
 .hotel-list a {
   color: #000000;
   text-decoration: none;
+}
+
+.sorting-containerol {
+  width: 1057px;
+
+}
+
+.interface-list {
+  width: 1056px;
+  padding: 0 72;
 }
 
 .hotel-list{
