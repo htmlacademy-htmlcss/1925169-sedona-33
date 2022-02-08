@@ -50,6 +50,7 @@ body {
   display: flex;
   width: 1060px;
   margin: 0 auto;
+  padding: 0 70;
 }
 
 .navigation-logo {
@@ -70,6 +71,7 @@ body {
 }
 
 .page-container {
+  background-color: #FFFFFF;
   width: 1200px;
   margin: 0 auto;
 }
@@ -90,7 +92,6 @@ body {
 }
 
 .main-index {
-  background-color: #ffffff;
   background-image: url("../images/index-background.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat;
@@ -101,11 +102,6 @@ body {
   text-align: center;
 }
 
-.adventages { 
-  background-color: #ffffff;
-  margin: 0;
-  padding: 0;
-}
 
 .advantages-list {
   display: flex;
@@ -117,6 +113,8 @@ body {
 .advantages-item {
   background-color: #83B3D31F;
   width: 400px;
+  text-align: center;
+  list-style: none;
 }
 
 .advantages-item:nth-child(2) {
@@ -163,21 +161,22 @@ body {
   font-size: 22px;
   line-height: 26px;
   color: #333333;
-  font-weight: 400;
   width: 720px;
   margin: 0 auto;
 }
 
 .town-photo {
   display: flex;
-  flex-direction: spspace-between;
   color: #FFFFFF;
   background-color: #83B3D3;
-  width: 1200px;
 }
 
-.town-photo .advantages-item-blue {
+.photo-block {
   width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .town-photo .number {
@@ -204,8 +203,7 @@ body {
   padding: 0 0 0 200;
 }
 
-.take-mailing .button-blue 
-{
+.take-mailing .button-blue {
   width: 200px;
   padding: 0 200 0 0;
 }
@@ -238,8 +236,7 @@ body {
 
 .inner-header  {
   background-image: url(../images/catalog-background.jpg);
-  color: #FFFFFF;
-      
+  color: #FFFFFF
 }
 
 .inner-header-title{
@@ -255,7 +252,7 @@ body {
 .catalog-filter-group {
   font-size: 18px;
   line-height: 23px;
-  display: flex;
+  
 }
 
 .catalog-filter-title {
@@ -289,6 +286,11 @@ body {
   line-height: 31px;
 }
 
+.take-mailing-catalog {
+  width: 800px;
+  padding: 0 200;
+}
+
 .mailing-info-catalog {
   color: #333333;
 }
@@ -299,9 +301,10 @@ body {
 }
 
 .social-list {
+  display: flex;
+
   text-decoration: none;
   max-width: 120px;
-  padding: 0 1021 0 72;
   margin-right: auto;
 }
 
@@ -312,8 +315,6 @@ body {
   font-weight: 400;
   color: #000000;
   text-decoration: none;
-  width: 720px;
-  padding: 0 240;
 }
 
 .footer-logo {
@@ -323,9 +324,8 @@ margin-left: auto;
 
 .page-footer-container {
   display: flex;
-  width: 1200px;
-  margin: 0 auto;
   justify-content: space-between;
+  align-items: center;
 }
 
 .button-blue {
