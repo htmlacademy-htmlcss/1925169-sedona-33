@@ -305,6 +305,10 @@ padding: 20px 17px;
   text-align: right;
 }
 
+.main-inner {
+  margin-bottom: 73px;
+}
+
 .inner-header  {
   background-image: url(../images/catalog-background.jpg);
   color: #FFFFFF
@@ -317,6 +321,7 @@ padding: 20px 17px;
   margin-bottom: 5px;
   margin-right: 71px;
   margin-top: 0;
+  padding-left: 70px;
 }
 
 .breadcrumbs {
@@ -325,13 +330,36 @@ padding: 20px 17px;
   margin: 0;
   padding: 0;
   margin-right: 73px;
-
+  padding-left: 70px;
 }
 
-.catalog-hotel {
+.breadcrumbs-item {
+  
+}
+
+.index-columns {
   display: flex;
-  flex-direction: row;
-  margin-bottom: 44px;
+  justify-content: space-between;
+}
+
+.button-price {
+  display: flex;
+  flex-direction: column;
+  margin-right: 72px;
+}
+
+.button-price .button-blue {
+  width: 160px;
+  min-width: 48px;
+  align-items: center;
+text-align: center;
+text-transform: uppercase;
+}
+
+.catalog-filter {
+  display: flex;
+  margin: 45px 0;
+  padding-left: 70px;
 }
 
 .catalog-filter-group {
@@ -356,10 +384,9 @@ padding: 20px 17px;
   width: 1057px;
   min-height: 48px;
   display: flex;
-  padding: 49px;
-  padding-left: 111px;
-  padding-right: 32px;
-  margin: 0;
+  padding: 49px 0;
+  margin: 0 auto;
+  align-items: center;
 }
 
 .sorting-container b {
@@ -373,7 +400,7 @@ margin: 0;
 padding: 0;
 width: 287px;
 height: 48px;
-margin-left: auto;
+margin-left: 50px;
 }
 
 .interface-list {
@@ -406,18 +433,12 @@ height: 48px;
   line-height: 31px;
 }
 
-.mailing-info-catalog {
-  color: #333333;
-}
-
 .button-blue .pagination-show-more {
   display: inline;
   align-items: center;
   width: 620px;
   height: 60px;
-  padding: 30px;
-  padding-left: 328px;
-  padding-right: 253px;
+  padding: 30px 290px;
 }
 
 .sorting-container-pagination {
@@ -443,6 +464,8 @@ height: 48px;
   margin-right: 8px;
   line-height: 26px;
   font-weight: 700;
+  align-items: center;
+  justify-content: center;
 }
 
 .pagination-current {
@@ -451,6 +474,20 @@ height: 48px;
 
 .pagination-item:not(:last-child) {
   margin-right: 8px;
+}
+
+.hotel-search b{
+  color: #333333;
+  font-size: 18px;
+  line-height: 23px;
+  margin-left: auto;
+}
+
+.select-control-hotel {
+  margin-left: 51px;
+  width: 160px;
+  height: 48px;
+
 }
 
 page-footer {
@@ -492,7 +529,7 @@ margin-left: auto;
 .take-mailing-catalog {
   width: 800px;
   align-items: center;
-  padding: 0 200;
+  margin: 0 auto;
 }
 
 .take-mailing-catalog input{
@@ -500,6 +537,26 @@ margin-left: auto;
   min-height: 60px;
   background-color: #F2F2F2;
 }
+
+.mailing-info-catalog {
+  font-size: 22px;
+  line-height: 26px;
+  text-align: center;
+  color: #333333;
+  margin: 0;
+  margin-bottom: 46px;
+}
+
+.mailing-catalog {
+  align-items: center;
+  font-size: 30px;
+  line-height: 36px;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 46px;
+}
+
 .take-mailing-catalog .button-blue {
   width: 200;
   min-height: 61px;
@@ -586,3 +643,10 @@ margin-left: auto;
   font-family: inherit;
 }
 
+.button-mini {
+  width: 100%; 
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
