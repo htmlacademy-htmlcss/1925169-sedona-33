@@ -98,6 +98,15 @@ padding: 20px 17px;
   min-height: 66px;
 }
 
+.navigation-link:hover {
+  color: #756257;
+}
+
+.navigation-link:focus {
+  box-shadow:  inset 0 0 0 4px #83B3D3;
+  outline: none;
+}
+
 .page-container {
   background-color: #FFFFFF;
   width: 1200px;
@@ -151,7 +160,6 @@ padding: 20px 17px;
 }
 
 .advantages-item {
-  padding-top: 91px;
   background-color: #83B3D31F;
   width: 400px;
   text-align: center;
@@ -172,10 +180,13 @@ padding: 20px 17px;
   text-transform: uppercase;
   font-weight: 700;
   margin-bottom: 20px;
+  margin-top: 23px;
+
 }
 
 .advantages-item p{
-  
+  width: 250px;
+  margin: 0;
 }
 
 .title_town {
@@ -216,8 +227,11 @@ padding: 20px 17px;
   width: 400px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+}
+
+.logo-blok {
+  margin-top: 90px;
 }
 
 .town-photo b {
@@ -232,17 +246,44 @@ padding: 20px 17px;
 
 .town-photo p {
   text-align: center;
-  color: #333333;
+  color: #FFFFFF;
   font-weight: 400;
   width: 250px;
-  margin: 0 75px;
   margin-bottom: 103px;
+  margin-top: 0;
 }
 
 .town-causes {
   display: flex;
   margin: 0 auto;
   margin-bottom: 91px;
+}
+
+.town-causes b {
+  width: 400;
+  min-height: 56;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0;
+  margin-top: 98px;
+}
+
+.town-causes .number {
+  width: 250px;
+  min-height: 21px;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 30px 75px;
+  color: #333333;
+}
+
+.town-causes p {
+  color: #333333;
+  width: 250px;
+  margin-top: 0;
+  margin-bottom: 103px;
 }
 
 .take-mailing {
@@ -259,6 +300,7 @@ padding: 20px 17px;
 .take-mailing input {
   font-family: inherit;
   width: 600px;
+  min-height: 60px;
   padding: 0 0 0 200;
 }
 
@@ -269,7 +311,7 @@ padding: 20px 17px;
 .take-mailing .button-blue {
   width: 200px;
   padding: 0 200 0 0;
-  margin: bottom 93px; ;
+  margin-bottom: 93px;
 }
 
 .mailing {
@@ -307,9 +349,15 @@ padding: 20px 17px;
   margin-bottom: 73px;
 }
 
+.inner-wrapper {
+ width: 1055px;
+ margin: 0 auto;
+}
+
 .inner-header  {
   background-image: url(../images/catalog-background.jpg);
-  color: #FFFFFF
+  color: #FFFFFF;
+  padding: 0 72px;
 }
 
 .inner-header-title{
@@ -319,7 +367,6 @@ padding: 20px 17px;
   margin-bottom: 5px;
   margin-right: 71px;
   margin-top: 0;
-  padding-left: 70px;
 }
 
 .breadcrumbs {
@@ -327,12 +374,14 @@ padding: 20px 17px;
   list-style: none;
   margin: 0;
   padding: 0;
-  margin-right: 73px;
-  padding-left: 70px;
 }
 
-.breadcrumbs-item {
-  
+.breadcrumbs-house {
+ margin-right: 10px;
+}
+
+.breadcrumbs-link {
+  margin-left: 10px;
 }
 
 .index-columns {
@@ -343,7 +392,6 @@ padding: 20px 17px;
 .button-price {
   display: flex;
   flex-direction: column;
-  margin-right: 72px;
 }
 
 .button-price .button-blue {
@@ -357,7 +405,6 @@ padding: 20px 17px;
 .catalog-filter {
   display: flex;
   margin: 45px 0;
-  padding-left: 70px;
 }
 
 .catalog-filter-group {
@@ -379,7 +426,6 @@ padding: 20px 17px;
 }
 
 .sorting-container {
-  width: 1057px;
   min-height: 48px;
   display: flex;
   padding: 49px 0;
@@ -394,11 +440,11 @@ padding: 20px 17px;
 }
 
 .select-control {
-margin: 0;
-padding: 0;
-width: 287px;
-height: 48px;
-margin-left: 50px;
+  margin: 0;
+  padding: 0;
+  width: 287px;
+  height: 48px;
+  margin-left: 192px;
 }
 
 .interface-list {
@@ -413,8 +459,8 @@ margin-left: 50px;
 }
 
 .interface-item {
-width: 48px;
-height: 48px;
+  width: 48px;
+  height: 48px;
 }
 
 .hotel-list{
@@ -422,59 +468,75 @@ height: 48px;
   line-height: 23px;
   color: #333333;
   list-style: none;
-  padding: 0 72px;
+  padding: 0;
   margin: 0;
   display: grid;
   grid-template-columns: 340px 340px 340px ;
   grid-template-rows: 438px 438px;
-  width: 1056px;
   column-gap: 18px;
   row-gap: 10px;
 }
 
 .hotel-card-image {
-  margin: 20px;
-  margin-bottom: 0;
+  margin: 0;
   align-items: center;
 }
 
 .hotel-card-title {
   font-size: 24px;
   line-height: 31px;
-  margin: 16px;
-  margin-left: 20px;
+  margin: 16px 0;
 }
 
-.button-blue .pagination-show-more {
-  align-items: stretch;
+.hotel-showmore {
+  padding: 30pxd 0;
+  width: 1055px;
+  margin: 0 auto;
+  padding: 30px 0;
+  border-top: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6;
+  display: flex;
+  justify-content: center;
+}
+
+.pagination-show-more {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 620px; 
-  height: 60px;
-  margin: 0 290px;
+  min-width: none;height: 60px;
+  margin: 0 ;
+  cursor: pointer;
 }
 
 .price-from {
   display: flex;
   width: 300px;
-  margin: 0 20px;
+  margin: 0;
   margin-bottom: 16px;
 }
 
 .price-from .hotel-card-price {
- margin-left: 25px;
+ margin: 0;
 }
 
 .button-card {
   display: flex;
   width: 300px;
-  margin: 0 20px;
-
+  margin: 0;
+  margin-bottom: 16px;
 }
 
 .rating {
   display: flex;
   width: 300px;
-  margin: 20px;
-  margin-top: 16px;
+  margin: 0;
+}
+
+.hotel-card {
+display: flex;
+flex-direction: column;
+padding: 20px;
 }
 
 .hotel-card-rating {
@@ -491,7 +553,7 @@ height: 48px;
 .sorting-container-pagination {
   display: flex;
   justify-content: space-between;
-  padding: 30px;
+  padding: 30px 0;
   margin: 0;
 }
 
@@ -550,6 +612,15 @@ height: 48px;
   margin-right: 30px;
 }
 
+.social-item:hover {
+color: #68A2CA;
+}
+
+.social-item:focus {
+  box-shadow: inset 0 0 0 4px #83B3D3;
+  outline: none;
+}
+
 .tel {
   text-align: center;
   font-size: 40px;
@@ -559,6 +630,15 @@ height: 48px;
   text-decoration: none;
 }
 
+.tel:hover {
+  color: #756257;
+  }
+
+.tel:focus {
+  box-shadow: inset 0 0 0 4px #83B3D3;
+  outline: none;
+}
+  
 .footer-logo {
 width: 115px;
 margin-left: auto;
@@ -573,7 +653,6 @@ margin-left: auto;
 }
 
 .take-mailing-catalog {
-  width: 800px;
   align-items: center;
   margin: 0 auto;
 }
@@ -582,6 +661,7 @@ margin-left: auto;
   width: 600px;
   min-height: 60px;
   background-color: #F2F2F2;
+  margin: 0 auto;
 }
 
 .mailing-info-catalog {
@@ -599,15 +679,38 @@ margin-left: auto;
   line-height: 36px;
   text-align: center;
   text-transform: uppercase;
-  margin: 0;
+  margin-top: 72px;
   margin-bottom: 46px;
 }
 
-.take-mailing-catalog .button-blue {
+.navigation-link .scan-button {
+  padding: 9px 15px;
+}
+
+.causes .scan-button {
+  display: inline-flex;
+  align-items: center;
+  padding: 15px 0;
+  width: 575px;
+  min-height: 60px;
+}
+
+.mail-email-button {
+  justify-content: center;
+  
+  padding: 20px 0;
+  min-height: 60px;
+}
+  
+.mail-email-button .button-blue {
+  display: inline-flex;
+  justify-content: center;
   width: 200;
   min-height: 61px;
   margin: 0;
-  padding: 0;
+  padding: 16px;
+  cursor: pointer;
+  text-align: center;
 }
 
 .button-blue {
@@ -619,6 +722,20 @@ margin-left: auto;
   text-decoration: none;
   color: #FFFFFF;
   font-family: inherit;
+  border: none;
+  display: inline-flex;
+  justify-content: center;
+  border-radius: 4px;
+  padding: 10px 0;
+}
+
+.button-blue:hover {
+background-color: #68A2CA;
+}
+
+.button-blue:focus {
+ box-shadow: inset 0 0 0 4px #756257;
+ outline: none;
 }
 
 .hotel-card .button-blue {
@@ -649,6 +766,11 @@ margin-left: auto;
   height: 37px;
   margin-left: auto;
   text-transform: uppercase;
+  border: none;
+  display: inline-flex;
+  justify-content: center;
+  border-radius: 4px;
+  padding: 10px 0;
 }
 
 .hotel-card .scan-button {
@@ -674,6 +796,20 @@ margin-left: auto;
   text-decoration: none;
   color: #FFFFFF;
   font-family: inherit;
+  border: none;
+  display: inline-flex;
+  justify-content: center;
+  border-radius: 4px;
+  padding: 10px 0;
+}
+
+.scan-button:hover {
+ background-color: #615048;
+}
+  
+.scan-button:focus {
+ box-shadow: inset 0 0 0 4px #83B3D3;
+ outline: none;
 }
 
 .want-hotel .scan-button {
@@ -687,6 +823,7 @@ margin-left: auto;
   font-family: inherit;
   padding: 0 313 0 312;
   margin-bottom: 93px;
+  width: 575px;
 }
 
 .pagination-item .button-blue{
@@ -706,4 +843,13 @@ margin-left: auto;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.button-clean {
+  margin-top: 20px;
+  font-size: 18px;
+  line-height: 23px;
+  text-align: center;
+  color: #FFFFFF;
+  cursor: pointer;
 }
