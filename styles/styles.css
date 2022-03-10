@@ -598,21 +598,22 @@ margin-right: 34px;
 
 .control:active .control-mark {
   background: rgba(255, 255, 255, 0.6);
-  border: 3px solid #83b3d3;
+  outline: 3px solid #83b3d3;
 }
 
 .control-input[type="radio"]:checked + .control-mark::before{
   content: "";
   position: absolute;
-  top: 5px;
-  left: 5px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50% );
   width: 10px;
   height: 10px;
   border-radius: 50%;
   background: #3f5e72;
 }
 
-.control-input[type="checkbox"]:checked + .control-mark::before {
+/* .control-input[type="checkbox"]:checked + .control-mark::before {
   transform: rotate(-45deg);
   content: "";
   position: absolute;
@@ -631,7 +632,17 @@ margin-right: 34px;
   left: 11px;
   width: 2px;
   height: 11px;
-  background: #3f5e72;
+  background: #3f5e72; */
+
+
+.control-input[type="checkbox"]:checked + .control-mark::after {
+  content: "";
+  position: absolute;
+  background-image: url(../images/vector.svg);
+  top: 5px;
+  left: 5px;
+  width: 12px;
+  height: 10px;
 }
 
 .hotel-list a {
@@ -736,26 +747,44 @@ margin-right: 34px;
 }
 
 .catalog-filter-label {
+  display: flex;
   margin-left: 30px;
-  margin: 13px;
+  margin: 13px 0;
+}
+
+.one.catalog-filter-label{
+  margin-left: 31px;
 }
 
 .range-input {
   width: 113px;
   background-color: transparent;
   color: #ffffff;
+  font-family: inherit;
   border: none;
 }
  
-.range-wrapper-inputs:hover {
+.one.catalog-filter-label:hover {
   opacity: 0.6;
 }
 
-.range-wrapper-inputs:focus{
+.one.catalog-filter-label:focus{
   box-shadow: 0px 0px 0px 3px #81b3d2;
 }
 
-.range-wrapper-inputs:active {
+.one.catalog-filter-label:active {
+  background: #756257;
+}
+
+.two.catalog-filter-label:hover {
+  opacity: 0.6;
+}
+
+.two.catalog-filter-label:focus{
+  box-shadow: 0px 0px 0px 3px #81b3d2;
+}
+
+.two.catalog-filter-label:active {
   background: #756257;
 }
 
@@ -963,13 +992,16 @@ margin-right: 34px;
 }
 
 .select-control-hotel {
-  margin-left: 51px;
   width: 160px;
   height: 48px;
   padding-left: 17px;
   color: #333333;
   font-size: 18px;
   line-height: 23px;
+  background-image: url(../images/arrow.select-control.svg);
+  background-repeat: no-repeat;
+  appearance: none;
+  background-position: right 16px center;
   border: 2px solid #e6e6e6;
   border-radius: 4px;
 }
@@ -1160,6 +1192,7 @@ margin-right: 34px;
   font-size: 20px;
   line-height: 26px;
   font-weight: 700;
+  font-family: inherit;
   border: none;
   border-radius: 0px 10px 10px 0px;
   background: #83b3d3;
@@ -1313,7 +1346,7 @@ background-color: #68a2ca;
 
 .scan-button:active {
   background: #615048;
-  opacity: 0.3;
+  color: rgba(255, 255 , 255, 0.3);
 }
 
 .want-hotel .scan-button {  
@@ -1324,6 +1357,7 @@ background-color: #68a2ca;
   font-weight: 700;
   text-align: center;
   text-decoration: none;
+  text-transform: uppercase;
   color: #ffffff;
   font-family: inherit;
   background-color: #756257;
@@ -1340,7 +1374,7 @@ background-color: #68a2ca;
 
  .want-hotel .scan-button:active {
   background: #615048;
-  opacity: 0.3;
+    color: rgba(255, 255, 255, 0,3);
  } 
  
 .error {
