@@ -121,15 +121,22 @@ margin-right: 34px;
 }
 
 .navigation-link {
-  padding: 20px 0;
+  padding: 18.5px 0;
 }
 
 .navigation-link:hover {
   color: #756257;
 }
 
-.navigation-link svg{
+.navigation-link svg {
   fill: #000000;
+}
+
+.navigation-link svg:hover {
+  fill: #756257;
+}
+.navigation-link svg:active { 
+  opacity: 0.3;
 }
 
 .navigation-link:active {
@@ -160,7 +167,6 @@ margin-right: 34px;
 }
 
 .want-button {
-  width: 160;
   padding: 9px 35px;
   text-align: center;
   text-transform: uppercase;
@@ -184,14 +190,15 @@ margin-right: 34px;
   outline: none;
 }
 
-.want-button:active{
-  color: rgba(117, 98, 87, 0.3);
+.want-button:active {
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .page-container {
   width: 1200px;
   margin: 0 auto;
   background-color: #ffffff;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
 }
 
 .logo {
@@ -725,16 +732,12 @@ margin-right: 34px;
 .range-wrapper-inputs {
   position: relative;
   display: flex;
-  justify-content: center;
   margin-top: 0;
   margin-bottom: 34px;
   width: 287px;
   height: 48px;
-  border: 2px solid #ffffff;
-  border-radius: 4px;
-  text-align: right;
 }
-
+/* 
 .range-wrapper-inputs::after {
   position: absolute;
   content: '';
@@ -742,28 +745,44 @@ margin-right: 34px;
   right: 140px;
   display: flex;
   width: 2px;
-  height: 47px;
+  height: 46px;
   background-image: url(../images/line.svg);
-}
+} */
 
 .catalog-filter-label {
   display: flex;
-  margin-left: 30px;
-  margin: 13px 0;
+  align-items: center;
+  padding: 0 12px;
+  width: 50%;
+  border: 2px solid #ffffff;
 }
 
 .one.catalog-filter-label{
-  margin-left: 31px;
+  border-radius: 4px 0 0 4px;
 }
 
 .range-input {
-  width: 113px;
+  width: 100%;
+  padding: 0;
+  padding-right: 5px;
+  font-size: 18px;
+  line-height: 23px;
   background-color: transparent;
   color: #ffffff;
   font-family: inherit;
   border: none;
+
 }
  
+.range-input:focus {
+  border: none;
+  outline: none;
+}
+
+.range-input:active {
+  background: none;
+}
+
 .one.catalog-filter-label:hover {
   opacity: 0.6;
 }
@@ -774,6 +793,10 @@ margin-right: 34px;
 
 .one.catalog-filter-label:active {
   background: #756257;
+}
+
+.two.catalog-filter-label {
+  border-radius: 0 4px 4px 0;
 }
 
 .two.catalog-filter-label:hover {
@@ -856,11 +879,11 @@ margin-right: 34px;
 
 .pagination-show-more {
   display: flex;
-  justify-content: center;
   align-items: center;
   width: 620px; 
-  min-width: none;height: 60px;
+  height: 60px;
   margin: 0 ;
+  text-transform: uppercase;
   cursor: pointer;
 }
 
@@ -899,8 +922,17 @@ margin-right: 34px;
 
 .rating {
   display: flex;
+  align-items: center;
   width: 300px;
   margin: 0;
+}
+
+.hotel-stars { 
+  margin-right: 7px;
+}
+
+.hotel-stars:last-of-type {
+margin-right: 0;
 }
 
 .hotel-card {
@@ -938,7 +970,6 @@ margin-right: 34px;
   padding: 0;
   margin: 0;
   list-style: none;
-  margin-right: 301px;
 }
 
 .pagination-link {
@@ -979,26 +1010,26 @@ margin-right: 34px;
 .hotel-search { 
   position: relative;
   display: flex;
+  align-items: center;
 }
   
 .hotel-search b {
-  display: inline;
-  width: 175px;
-  align-items: center;
-  margin-left: auto;
+  margin-right: 50px;
+  font-weight: 400;
   color: #333333;
   font-size: 18px;
   line-height: 23px;
 }
 
 .select-control-hotel {
+  display: flex;
+  align-items: center;
   width: 160px;
   height: 48px;
   padding-left: 17px;
   color: #333333;
   font-size: 18px;
   line-height: 23px;
-  background-image: url(../images/arrow.select-control.svg);
   background-repeat: no-repeat;
   appearance: none;
   background-position: right 16px center;
@@ -1007,6 +1038,9 @@ margin-right: 34px;
 }
 
 .select-control {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   margin: 0;
   padding-left: 19px;
   width: 287px;
@@ -1021,6 +1055,23 @@ margin-right: 34px;
   background-position: right 16px center;
 }
 
+.select-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 100%;
+  padding: 0;
+  margin-left: auto;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.select-button svg {
+  fill: #000000 ;
+  opacity: 0.3;
+}
 .social-list {
   display: flex;
   flex-wrap: wrap;
@@ -1040,40 +1091,43 @@ margin-right: 34px;
   margin-right: 0;
 }
 
-.social-item:hover {
-  color: #68a2ca;
+.social-item svg {
+fill: #83B3D3
 }
 
-.social-item:focus {
+.social-item svg:hover {
+  fill: #68a2ca;
+}
+
+.social-item svg:focus {
   box-shadow: inset 0 0 0 4px #83b3d3;
   border-radius: 10px;
   outline: none;
 }
 
-.social-item:active {
-  color: #68a2ca;
+.social-item svg:active {
+  fill: #68a2ca;
+  opacity: 0.3;
 }
 
-.tel {
+.footer-tel {
   text-align: center;
   font-size: 40px;
   line-height: 40px;
   font-weight: 400;
-  color: #000000;
-  text-decoration: none;
 }
 
-.tel:hover {
+.footer-tel:hover {
   color: #756257;
   }
 
-.tel:focus {
+.footer-tel:focus {
   box-shadow: inset 0 0 0 4px #83b3d3;
   outline: none;
   border-radius: 10px;
 }
   
-.tel:active {
+.footer-tel:active {
   color: #756257;
 }
 
@@ -1094,11 +1148,11 @@ margin-right: 34px;
   fill: #000000;
 }
 
-.footer-logo:hover {
+.footer-logo svg:hover {
   fill: #756257;
 }
 
-.footer-logo:focus {
+.footer-logo svg:focus {
   box-shadow: inset 0 0 0 4px #83b3d3;
   outline: none;
   border-radius: 10px;
@@ -1160,23 +1214,23 @@ margin-right: 34px;
   border-radius: 10px 0px 0px 10px;
 }
 
-.mail-email-button {
+.mail-email-box {
   display: flex;
   justify-content: center;
   min-height: 60px;
 }
 
-.mail-email-button:hover {
+.button-blue-mail:hover {
   background-color: #68a2ca;
 }
 
-.mail-email-button:focus {
+.button-blue-mail:focus {
   background-color: #68a2ca;
   box-shadow: inset 0 0 0 4px #756257;
   outline: none;
 }
 
-.mail-email-button:active {
+.button-blue-mail:active {
   background-color: #68a2ca;
 }
 
@@ -1507,6 +1561,7 @@ background-color: #68a2ca;
 .modal-title {
   margin: 0;
   margin-bottom: 64px;
+  color: #000000;
   font-weight: 700;
   font-size: 30px;
   line-height: 40px;
@@ -1514,12 +1569,22 @@ background-color: #68a2ca;
 }
 
 .field-group-peaple {
+  position: relative;
   display: flex;
   align-items: center;
+  color: #000000;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 40px;
 }
 
 .child-input {
   margin-left: 43px;
+  font-family: inherit;
+  background-color: #f2f2f2;
+  border-radius: 4px;
+  border: none;
+  appearance: none;
 }
 
 .peaple-input {
@@ -1534,6 +1599,29 @@ background-color: #68a2ca;
   line-height: 40px;
   text-align: center;
   color: #000000;
+  background-color: #f2f2f2;
+  border-radius: 4px;
+  border: none;
+}
+
+.field-group-peaple::before {
+  position: absolute;
+  content: "";
+  top: 25px;
+  right: 95px;
+  width: 13px;
+  height: 1px;
+  background-image: url(../images/minus.svg);
+}
+
+.field-group-peaple::after {
+  position: absolute;
+  content: "";
+  top: 19px;
+  right: 25px;
+  width: 13px;
+  height: 13px;
+  background-image: url(../images/plus.svg);
 }
 
 .peaple{
@@ -1555,9 +1643,14 @@ background-color: #68a2ca;
   background-image: url(../images/date.svg);
   background-repeat: no-repeat; 
   background-position: 390px;
-  background: #f2f2f2;
+  background-color: #f2f2f2;
   border-radius: 4px;
   border: none;
+}
+
+.field svg {
+  fill: #000000;
+  opacity: 0.3;
 }
  
 .field-group {
@@ -1569,6 +1662,7 @@ background-color: #68a2ca;
   font-weight: 700;
   font-size: 18px;
   line-height: 40px;
+
 }
 
 .field-group .date {
@@ -1584,6 +1678,10 @@ background-color: #68a2ca;
   width: 155px;
   margin: 0;
   padding-right: 78px;
+}
+
+.date {
+  margin-right: 70px;
 }
 
 .auth-form .red {
@@ -1648,11 +1746,15 @@ background-color: #68a2ca;
   margin-left: 70px;
 }
 
-.terms::after{
+.date-child {
+  position: relative;
+}
+
+.date-child::after{
   content: "";
   position: absolute;
-  top: 13px;
-  right: 140px;
+  top: 7px;
+  right: -34px;
   width: 25px;
   height: 25px;
   border-radius: 50%;
@@ -1663,7 +1765,20 @@ background-color: #68a2ca;
   background-position: center;
 }
 
-.terms::before {
+.tooltip {
+  position: absolute;
+  top: 37px;
+  right: -6px;
+  display: none;
+}
+
+.tooltip:hover ,
+.tooltip:active {
+  display: block;
+}
+
+
+/* .terms::before {
   position: absolute;
   content: "Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.";
   background: #333333;
@@ -1679,7 +1794,7 @@ background-color: #68a2ca;
   padding: 15px 18px 18px 22px;
   top: 55px;
   left: -75px;
-}
+} */
 
 .auth-form b {
   display: flex;
@@ -1703,8 +1818,10 @@ background-color: #68a2ca;
   width: 133px;
   height: 50px;
   text-align: center;
+  font-family: inherit;
+  appearance: none;
 }
 
 .modal-container-close {
-  display: none;
+  display: ;
 }
