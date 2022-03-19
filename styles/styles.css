@@ -547,6 +547,8 @@ margin-right: 34px;
   min-width: 48px;
   align-items: center;
   text-align: center;
+  font-size: 16px;
+  line-height: 21px;
   text-transform: uppercase;
 }
 
@@ -569,6 +571,7 @@ margin-right: 34px;
 }
 
 .catalog-filter-title {
+  font-weight: 700;
   font-size: 20px;
   line-height: 26px;
   list-style: none;
@@ -590,8 +593,8 @@ margin-right: 34px;
 
 .control-mark {
   position: absolute;
-  top: 3px;
-  left: -10px;
+  top: 0;
+  left: 0;
   width: 20px;
   height: 20px;
   border: none;
@@ -671,16 +674,20 @@ margin-right: 34px;
   text-transform: uppercase;
 }
 
-.select-control {
-  margin: 0;
-  padding: 0;
-  width: 287px;
-  height: 48px;
-  margin-left: 192px;
-  border: 2px solid #e6e6e6;
+.select-control:hover{
+  border: 2px solid #83b3d3;
   border-radius: 4px;
 }
 
+.select-control:focus{
+  border: 2px solid #83b3d3;
+  border-radius: 4px;
+}
+
+.select-control:active{
+  border: 2px solid #000000;
+  border-radius: 4px;
+}
 
 .interface-list {
   display: flex;
@@ -690,7 +697,7 @@ margin-right: 34px;
   flex-wrap: wrap;
   margin-top: 0;
   margin-bottom: 0;
-  margin-left: 550px;
+  margin-left: 80px;
   padding: 0;
 }
 
@@ -1022,33 +1029,26 @@ margin-right: 0;
 }
 
 .select-control-hotel {
-  display: flex;
-  align-items: center;
   width: 160px;
-  height: 48px;
   padding-left: 17px;
-  color: #333333;
-  font-size: 18px;
-  line-height: 23px;
-  background-repeat: no-repeat;
-  appearance: none;
-  background-position: right 16px center;
-  border: 2px solid #e6e6e6;
-  border-radius: 4px;
 }
 
 .select-control {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin: 0;
+  margin-left: auto;
   padding-left: 19px;
   width: 287px;
   height: 48px;
-  margin-left: 530px;
+  color: #333333;
+  font-family: inherit;
+  font-size: 18px;
+  line-height: 23px;
   border: 2px solid #e6e6e6;
   border-radius: 4px;
-  position: absolute;
   background-image: url(../images/arrow.select-control.svg);
   background-repeat: no-repeat;
   appearance: none;
@@ -1156,6 +1156,11 @@ fill: #83B3D3
   box-shadow: inset 0 0 0 4px #83b3d3;
   outline: none;
   border-radius: 10px;
+}
+
+.footer-logo svg:active {
+  fill: #756257;
+  opacity: 0.3;
 }
 
 .take-mailing-catalog {
@@ -1458,23 +1463,26 @@ background-color: #68a2ca;
   border: 2px solid #e6e6e6; 
 }
 
+.button-mini-current {
+   border: 2px solid #000000; 
+}
+
 .interface-item:first-child {
   margin-left: 0;
-  border: 2px solid #000000;
   border-radius: 4px;
 }
 
-.interface-item:hover{
+.button-mini:hover{
   border: 2px solid #83b3d3;
   border-radius: 4px;
 }
 
-.interface-item:focus{
+.button-mini:focus{
   border: 2px solid #83b3d3;
   border-radius: 4px;
 }
 
-.interface-item:active{
+.button-mini:active{
   border: 2px solid #000000;
   border-radius: 4px;
 }
@@ -1547,14 +1555,16 @@ background-color: #68a2ca;
 
 .modal-close-button:hover{
   background: #e6e6e6;
+  background-image: url(../images/modal-close.svg);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .modal-close-button:focus {
   border: 3px solid #83b3d3;
-}
-
-.modal-close-button:active{
-
+  background-image: url(../images/modal-close.svg);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 
@@ -1572,6 +1582,7 @@ background-color: #68a2ca;
   position: relative;
   display: flex;
   align-items: center;
+  width: 133px;
   color: #000000;
   font-weight: 700;
   font-size: 18px;
@@ -1627,6 +1638,10 @@ background-color: #68a2ca;
 .peaple{
   display: flex;
   justify-content: space-between;
+}
+
+.peaple-form {
+  display: flex;
 }
 
 .field {
@@ -1746,6 +1761,16 @@ background-color: #68a2ca;
   margin-left: 70px;
 }
 
+.child::after {
+ position: absolute;
+ content: "";
+ top: 47px;
+ right: 64px;
+ width: 19px;
+ height: 9px;
+ background-image: url(../images/triangle.svg);
+}
+
 .date-child {
   position: relative;
 }
@@ -1777,8 +1802,7 @@ background-color: #68a2ca;
   display: block;
 }
 
-
-/* .terms::before {
+.terms::before {
   position: absolute;
   content: "Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.";
   background: #333333;
@@ -1794,7 +1818,8 @@ background-color: #68a2ca;
   padding: 15px 18px 18px 22px;
   top: 55px;
   left: -75px;
-} */
+}
+
 
 .auth-form b {
   display: flex;
@@ -1816,12 +1841,12 @@ background-color: #68a2ca;
   display: flex;
   align-items: center;
   width: 133px;
-  height: 50px;
+  min-height: 50px;
   text-align: center;
   font-family: inherit;
   appearance: none;
 }
 
 .modal-container-close {
-  display: ;
+  /* display: none; */
 }
