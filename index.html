@@ -187,31 +187,73 @@
           </button>
 
           <form class="auth-form" action="https://echo.htmlacademy.ru/" method="post">
-              <p class="field-group" 27 апреля 2020>
-                <b class="date">Дата заезда:</b>
-                <label class="visually-hidden" for="auth-login">27 апреля 2020</label>
+              <p class="field-group">
+                <label class="date" for="auth-login">Дата заезда:</label>
                 <input class="auth-form-field field" type="post" id="auth-login" name="arrival-date" value="27 апреля 2020">
               </p>
               <b class="red">Мы не можем отправить вас в прошлое.</b>
-              <p class="field-group" 1 сентября 2021>
-                <b class="date">Дата выезда:</b>
-                <label class="visually-hidden" for="date-departure">1 сентября 2021</label>
+              <p class="field-group">
+                <label class="date" for="date-departure">Дата выезда:</label>
                 <input class="auth-form-field field" type="post" id="date-departure" name="date-departure" value="1 сентября 2021">
               </p>
               <b class="gray">На эти даты есть свободные номера. Пока есть.</b>
             
 
-            <div class="peaple">
-                <p class="field-group-peaple" 2>
-                  <b class="date">Взрослые:</b>
-                  <label class="visually-hidden" for="peaple-number"></label>
-                  <input class="peaple-form-field" type="post" id="peaple-number" name="peaple-number" value="2">
-                </p>
-                <p class="field-group-peaple child terms">
-                  <b class="date-child">Дети:</b>        
-                  <label class="visually-hidden" for="child-number"></label>
-                  <input class="peaple-form-field child-input" type="post" id="child-number" name="child-number" value="1">
-                </p>
+            <div class="people">
+                <div class="field-group-people">
+                  <label class="date" for="people-number">Взрослые:</label>
+                  <div class="form-counter-block">
+                    <button class="form-counter-butten orm-counter-minus" type="button">
+                      <svg width="13" height="1" viewBox="0 0 13 1" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path  d="M0 0L0 1L13 1V0L0 0Z"/>
+                      </svg>
+                    </button>
+                    <input class="people-form-field" type="post" id="people-number" name="people-number" value="2">
+                    <button class="form-counter-butten orm-counter-plus" type="button">
+                      <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g >
+                        <path d="M13 6H7V0H6V6H0V7H6V13H7V7H13V6Z"/>
+                        </g>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                <div class="field-group-people child terms">   
+                  <label class="date-child" for="child-number">Дети:</label>
+                  <div class="popup">
+                    <span class="popup-icon">
+                      <svg width="1" height="9" viewBox="0 0 1 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_18711_1488)">
+                        <path d="M0 9H1L1 3H0L0 9Z" fill="white"/>
+                        <path d="M1 0H0V1H1V0Z" fill="white"/>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0_18711_1488">
+                        <rect width="1" height="9" fill="white"/>
+                        </clipPath>
+                        </defs>
+                      </svg>                        
+                    </span>
+                    <div class="popup-content">
+                      Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.
+                    </div>
+                  </div>
+                  <div class="form-counter-block">
+                    <button class="form-counter-butten orm-counter-minus" type="button">
+                      <svg width="13" height="1" viewBox="0 0 13 1" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 0L0 1L13 1V0L0 0Z"/>
+                      </svg>
+                    </button>
+                    <input class="people-form-field child-input" type="post" id="child-number" name="child-number" value="1">
+                    <button class="form-counter-butten orm-counter-plus" type="button">
+                      <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g>
+                        <path d="M13 6H7V0H6V6H0V7H6V13H7V7H13V6Z"/>
+                        </g>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
             </div>
 
             <button class="button auth-form-button" type="submit">Найти</button>
