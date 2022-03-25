@@ -1707,7 +1707,7 @@ background-color: #68a2ca;
 }
 
 .date {
-  margin-right: 70px;
+  padding-right: 70px;
   font-family: inherit;
   font-weight: 700;
   font-size: 18px;
