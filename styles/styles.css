@@ -69,6 +69,7 @@ body {
 
 .navigation-logo {
   position: absolute;
+  top: 0;
   z-index: 1;
   display: flex;
   margin-right: 70px;
@@ -80,6 +81,7 @@ body {
   display: flex;
   margin: 0;
   padding: 0 30px;
+  max-width: 580px;
   flex-wrap: wrap;
   margin-left: 169px;
   list-style: none;
@@ -229,7 +231,7 @@ body {
   padding-top: 51px;
   padding-bottom: 82px;
   background-image: url("../images/index-background.jpg");
-  background-size: 100% auto;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
@@ -401,7 +403,8 @@ body {
   padding-top: 93px;
   padding-bottom: 94px;
   background-image: url("../images/background.jpg");
-  background-size: 100% auto;
+  background-size: cover;
+  background-repeat: no-repeat;
   text-align: center; 
   font-size: 22px;
   line-height: 26px;
@@ -483,7 +486,8 @@ body {
 .inner-header  {
   padding: 0 85px;
   background-image: url("../images/catalog-background.jpg");
-  background-size: 100% auto;
+  background-size: cover;
+  background-repeat: no-repeat;
   color: #ffffff;
 }
 
@@ -824,11 +828,10 @@ body {
 .hotel-list{
   display: grid;
   grid-template-columns: 340px 340px 340px ;
-  grid-template-rows: 438px 438px;
   column-gap: 15px;
   row-gap: 0;
   padding: 0;
-  margin: 24px;
+  margin: 10px;
   margin-top: 44px;
   font-size: 18px;
   line-height: 23px;
@@ -886,7 +889,7 @@ body {
 }
 
 .hotel-card-price {
-  margin-left: 70px;
+  margin-left: 72px;
   font-weight: 400;
   font-size: 18px;
   line-height: 23px;
@@ -1002,9 +1005,10 @@ margin-right: 0;
   line-height: 23px;
 }
 
-.select-control-hotel {
+.select-control.select-control-hotel {
   width: 160px;
   padding-left: 17px;
+  margin: 0;
 }
 
 .select-control {
@@ -1013,10 +1017,10 @@ margin-right: 0;
   align-items: center;
   justify-content: space-between;
   margin: 0;
-  margin-left: 0;
+  margin-left: 170px;
   margin-right: 18px;
   padding-left: 19px;
-  width: 151px;
+  width: 287px;
   height: 48px;
   color: #333333;
   font-family: inherit;
@@ -1656,7 +1660,7 @@ background-color: #68a2ca;
   line-height: 40px;
   background-image: url("../images/date.svg");
   background-repeat: no-repeat; 
-  background-position: 390px;
+  background-position: 372px;
   background-color: #f2f2f2;
   border-radius: 4px;
   border: none;
@@ -1668,7 +1672,7 @@ background-color: #68a2ca;
 }
 
 .field:hover {
-  background: #e6e6e6;
+  background-color: #e6e6e6;
 }
 
 .field:active {
@@ -1707,7 +1711,7 @@ background-color: #68a2ca;
 }
 
 .date {
-  padding-right: 70px;
+  width: 155px;
   font-family: inherit;
   font-weight: 700;
   font-size: 18px;
@@ -1716,6 +1720,7 @@ background-color: #68a2ca;
 
 .auth-form {
   display: flex;
+  height: 50px;
 }
 
 .red {
@@ -1847,5 +1852,5 @@ background-color: #68a2ca;
 }
 
 .modal-container-close {
-  /* display: none; */
+  display: none;
 }
